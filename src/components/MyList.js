@@ -29,6 +29,7 @@ const MyList = ({ todos, onToggle, onRemove }) => {
   useEffect(() => {
     setTodoLoading(true);
     setTimeout(() => {
+      // 로딩창 보여주기용
       setTodoLoading(false);
     }, 300);
   }, []);
