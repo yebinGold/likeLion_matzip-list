@@ -6,7 +6,7 @@ export const MainContainer = styled.div`
   width: 480px;
   height: 100%;
   margin: 0px auto;
-  margin-top: 20px;
+  margin-top: 30px;
   color: ${(props) => props.theme.textColor}; // props에 접근해서 값 적용!
   background-color: ${(props) => props.theme.backgroundColor};
   border-radius: 25px;
@@ -63,8 +63,8 @@ export const Category = styled(NavLink)`
 `;
 
 export const MatzipListBlock = styled.div`
-  min-height: 70vh;
-  padding: 0px 0px 30px 45px;
+  min-height: 510px;
+  padding: 0px 0px 20px 45px;
   position: relative;
 `;
 export const LoadingBlock = styled.div`
@@ -156,7 +156,7 @@ export const PageDiv = styled.div`
     `}
 `;
 export const ListContainer = styled.div`
-  min-height: 69vh;
+  min-height: 500px;
   padding: 25px;
   position: relative;
 `;
