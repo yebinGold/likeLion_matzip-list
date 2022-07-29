@@ -39,7 +39,7 @@ const MyList = ({ todos, onToggle, onRemove }) => {
   }, [todos, listPage]);
 
   return (
-    <div style={{ minHeight: "65vh" }}>
+    <div style={{ minHeight: "70vh" }}>
       {todoLoading ? (
         <Loading />
       ) : (

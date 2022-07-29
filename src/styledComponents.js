@@ -38,7 +38,7 @@ export const CategoriesBlock = styled.div`
 `;
 
 export const Category = styled(NavLink)`
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
@@ -156,7 +156,7 @@ export const PageDiv = styled.div`
     `}
 `;
 export const ListContainer = styled.div`
-  min-height: 70vh;
+  min-height: 69vh;
   padding: 25px;
   position: relative;
 `;
