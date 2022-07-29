@@ -137,9 +137,8 @@ export const PagingBlock = styled.div`
   width: 80%;
   display: flex;
   justify-content: space-evenly;
-  padding: 10px;
   position: absolute;
-  bottom: 15px;
+  bottom: 25px;
 `;
 export const PageDiv = styled.div`
   font-weight: 800;
