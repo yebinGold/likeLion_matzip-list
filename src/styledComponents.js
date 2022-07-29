@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { NavLink } from "react-router-dom";
 
+
 export const MainContainer = styled.div`
   width: 480px;
   height: 100%;
@@ -30,16 +31,15 @@ export const MainHeader = styled.div`
 `;
 export const CategoriesBlock = styled.div`
   height: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 0.3px solid rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: space-evenly;
   padding: 15px;
 `;
 
 export const Category = styled(NavLink)`
-  font-size: 1.125rem;
+  font-size: 1.15rem;
   cursor: pointer;
-  white-space: pre;
   text-decoration: none;
   color: inherit;
   padding-bottom: 0.25rem;
@@ -64,7 +64,7 @@ export const Category = styled(NavLink)`
 
 export const MatzipListBlock = styled.div`
   min-height: 70vh;
-  padding: 7px 0px 45px 45px;
+  padding: 0px 0px 30px 45px;
   position: relative;
 `;
 export const LoadingBlock = styled.div`
@@ -118,11 +118,11 @@ export const MatzipBlock = styled.li`
     cursor: pointer;
   }
   h4 {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
   span {
     opacity: 0.8;
-    font-size: 14px;
+    font-size: 16px;
   }
   & + & {
     margin: 0.5rem 0;
@@ -143,7 +143,8 @@ export const PagingBlock = styled.div`
   bottom: 15px;
 `;
 export const PageDiv = styled.div`
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 18px;
   cursor: pointer;
   &:hover {
     color: #fcc419;

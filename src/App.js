@@ -62,7 +62,7 @@ function App() {
   };
 
   return (
-    <MainContainer theme={theme}>
+    <MainContainer theme={theme} className='gangwon'>
       <Header theme={theme} toggleTheme={toggleTheme}/>
       <Categories />
       <Routes>

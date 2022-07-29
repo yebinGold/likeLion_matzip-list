@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   faTrashCan,
   faSquare,
   faSquareCheck,
 } from "@fortawesome/free-regular-svg-icons";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ListBlock } from "./../styledComponents";
 
 const EachListItem = ({ name, checked, onToggle, onRemove }) => {
-  //console.log(todo);
   return (
     <ListBlock checked={checked}>
       <div>

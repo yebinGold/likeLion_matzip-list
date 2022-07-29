@@ -39,13 +39,13 @@ const MyList = ({ todos, onToggle, onRemove }) => {
   }, [todos, listPage]);
 
   return (
-    <div style={{ minHeight: "67vh" }}>
+    <div style={{ minHeight: "65vh" }}>
       {todoLoading ? (
         <Loading />
       ) : (
         <ListContainer>
           {todos.length === 0 ? (
-            <h3 style={{ textAlign: "center", opacity: 0.6 }}>Empty</h3>
+            <h2 style={{ textAlign: "center", opacity: 0.6 }}>Empty</h2>
           ) : (
             todosPerPage.map((todo) => (
               <EachListItem
