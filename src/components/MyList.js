@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { ListContainer, PagingBlock, PageDiv } from "./../styledComponents";
 import EachListItem from "./EachListItem";
 import Loading from "./Loading";
@@ -10,7 +10,7 @@ const MyList = ({ todos, onToggle, onRemove }) => {
   const [todosPerPage, setTodosPerPage] = useState([]);
   const ITEMS_PER_PAGE = 6;
 
-  const pagination = () => {
+  const pagination = useCallback(() => {
     // 페이지네이션
     const totalPages = Math.ceil(todos.length / ITEMS_PER_PAGE);
     const tempPages = [];
@@ -24,7 +24,7 @@ const MyList = ({ todos, onToggle, onRemove }) => {
       listPage * ITEMS_PER_PAGE
     );
     setTodosPerPage(currentPageTodos);
-  };
+  });
 
   useEffect(() => {
     setTodoLoading(true);
@@ -49,6 +49,7 @@ const MyList = ({ todos, onToggle, onRemove }) => {
           ) : (
             todosPerPage.map((todo) => (
               <EachListItem
+                key={todo.name}
                 name={todo.name}
                 checked={todo.checked}
                 onToggle={onToggle}

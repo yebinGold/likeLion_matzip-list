@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { MatzipListBlock, PageDiv, PagingBlock } from "../styledComponents";
 import Matzip from "./Matzip";
 import { useParams } from "react-router-dom";
@@ -13,9 +13,9 @@ const MatzipList = ({ onAdd }) => {
   const [shops, setShops] = useState([]); // 페이지 별로 보여줄 가게 정보
   const [shopsList, setShopsList] = useState([]); // 전체 가게 정보
   const params = useParams();
-  let category = params.category === undefined ? 'all' : params.category;
+  let category = params.category === undefined ? "all" : params.category;
 
-  const pagination = () => {
+  const pagination = useCallback(() => {
     // 페이지네이션
     page === 0 && setPage(1);
     const totalPages = Math.ceil(shopsList.length / ITEMS_PER_PAGE);
@@ -30,7 +30,7 @@ const MatzipList = ({ onAdd }) => {
       page * ITEMS_PER_PAGE
     );
     setShops(currentPageShops);
-  };
+  });
 
   // useEffect => category에 맞게 api 호출
   useEffect(() => {
@@ -50,7 +50,6 @@ const MatzipList = ({ onAdd }) => {
     pagination();
   }, [page]);
 
-
   return (
     <MatzipListBlock>
       {loading ? (
@@ -69,7 +68,11 @@ const MatzipList = ({ onAdd }) => {
           </ul>
           <PagingBlock>
             {pages.map((nowpage) => (
-              <PageDiv here={nowpage === page} key={nowpage} onClick={() => setPage(nowpage)}>
+              <PageDiv
+                here={nowpage === page}
+                key={nowpage}
+                onClick={() => setPage(nowpage)}
+              >
                 {nowpage}
               </PageDiv>
             ))}
