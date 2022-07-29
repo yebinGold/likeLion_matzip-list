@@ -19,9 +19,9 @@ export const MainContainer = styled.div`
 
 export const MainHeader = styled.div`
   text-align: center;
-  padding: 20px;
-  font-size: 24px;
-  font-weight: 400;
+  padding: 25px;
+  font-size: 26px;
+  font-weight: 500;
   background: #fd7e14;
   position: relative;
   .themeIcon {
