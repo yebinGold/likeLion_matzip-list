@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 
 export const MainContainer = styled.div`
-  width: 480px;
+  width: 444px;
   height: 100%;
   margin: 0px auto;
   margin-top: 30px;
@@ -12,7 +12,7 @@ export const MainContainer = styled.div`
   border-radius: 25px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 444px) {
     width: 100%;
   }
 `;
@@ -71,7 +71,6 @@ export const LoadingBlock = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  margin-right: 20px;
   font-size: 44px;
   color: red;
   animation: logo-spin infinite 0.8s linear;
