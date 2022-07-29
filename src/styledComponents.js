@@ -142,7 +142,7 @@ export const PagingBlock = styled.div`
 `;
 export const PageDiv = styled.div`
   font-weight: 800;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   &:hover {
     color: #fcc419;

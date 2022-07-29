@@ -37,7 +37,7 @@ const MatzipList = ({ onAdd }) => {
     setLoading(true);
     axios
       .get(
-        `https://afd8cb3b-0077-4554-a7be-4ce86d83222c.mock.pstmn.io/${category}`
+        `https://cffb044b-c7ae-4505-a0b6-0d743cd9b0b4.mock.pstmn.io/${category}`
       )
       .then((res) => {
         setShopsList(res.data);
